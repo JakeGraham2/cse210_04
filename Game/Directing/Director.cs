@@ -44,34 +44,37 @@ namespace Unit04.Game.Directing
         }
 
         /// <summary>
-        /// Gets directional input from the keyboard and applies it to the robot.
+        /// Gets directional input from the keyboard and applies it to the miner.
         /// </summary>
         /// <param name="cast">The given cast.</param>
         private void GetInputs(Cast cast)
         {
-            Actor robot = cast.GetFirstActor("robot");
+            Actor miner = cast.GetFirstActor("miner");
             Point velocity = _keyboardService.GetDirection();
-            robot.SetVelocity(velocity);     
+            int x = velocity.GetX();
+            int y = 0;
+            velocity = new Point(x, y);
+            miner.SetVelocity(velocity);
         }
 
         /// <summary>
-        /// Updates the robot's position and resolves any collisions with artifacts.
+        /// Updates the miner's position and resolves any collisions with artifacts.
         /// </summary>
         /// <param name="cast">The given cast.</param>
         private void DoUpdates(Cast cast)
         {
             Actor banner = cast.GetFirstActor("banner");
-            Actor robot = cast.GetFirstActor("robot");
+            Actor miner = cast.GetFirstActor("miner");
             List<Actor> artifacts = cast.GetActors("artifacts");
 
             banner.SetText("");
             int maxX = _videoService.GetWidth();
             int maxY = _videoService.GetHeight();
-            robot.MoveNext(maxX, maxY);
+            miner.MoveNext(maxX, maxY);
 
             foreach (Actor actor in artifacts)
             {
-                if (robot.GetPosition().Equals(actor.GetPosition()))
+                if (miner.GetPosition().Equals(actor.GetPosition()))
                 {
                     Artifact artifact = (Artifact) actor;
                     string message = artifact.GetMessage();
