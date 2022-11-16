@@ -4,8 +4,9 @@ namespace CSE210_04.Game.Casting
     {
         private int _points;
 
-        public Collectable(Game game, Vector2 position, string spriteName)
-            : base(game, position, spriteName);
+        public Collectable()
+        {
+        }
 
         public int GetPoints()
         {
