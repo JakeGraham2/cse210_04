@@ -63,24 +63,35 @@ namespace Unit04.Game.Directing
         /// <param name="cast">The given cast.</param>
         private void DoUpdates(Cast cast)
         {
-            Actor banner = cast.GetFirstActor("banner");
-            Actor miner = cast.GetFirstActor("miner");
-            List<Actor> artifacts = cast.GetActors("artifacts");
+            // TODO: change this to spawn, move, and handle actor collisions
 
-            banner.SetText("");
+            //1. spawn new collectables (randomize them)
+            //2. get instances of all the ators hat I need from the cast
+            Actor miner = cast.GetFirstActor("miner");
+            Actor score = cast.GetFirstActor("score");
+            List<Actor> collectables = cast.GetActors("collectables");
+
+
+            //3. move the miner
             int maxX = _videoService.GetWidth();
             int maxY = _videoService.GetHeight();
-            miner.MoveNext(maxX, maxY);
 
-            foreach (Actor actor in artifacts)
+            miner.MoveNext(maxX, maxY);
+            foreach (Actor collectable in collectables)
             {
-                if (miner.GetPosition().Equals(actor.GetPosition()))
+                collectable.MoveNext(maxX, maxY);
+            }
+
+            //4. handle collisions between the miner and the collectables
+            foreach (Actor collectable in collectables)
+            {
+                if (miner.GetPosition().Equals(collectable.GetPosition()))
                 {
-                    Artifact artifact = (Artifact) actor;
-                    string message = artifact.GetMessage();
-                    banner.SetText(message);
+                    int points = ((Collectable)collectable).GetPoints();
+                    ((Score)score).AddPoints(points);
+                    cast.RemoveActor("collectables", collectable")
                 }
-            } 
+            }
         }
 
         /// <summary>
