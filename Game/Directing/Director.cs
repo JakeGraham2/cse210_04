@@ -117,15 +117,15 @@ namespace Unit04.Game.Directing
             }
 
             //4. handle collisions between the miner and the collectables
-            // foreach (Actor collectable in collectables)
-            // {
-            //     if (miner.GetPosition().Equals(collectable.GetPosition()))
-            //     {
-            //         int points = ((Collectable)collectable).GetPoints();
-            //         ((Score)score).AddPoints(points);
-            //         cast.RemoveActor("collectables", collectable")
-            //     }
-            // }
+            foreach (Actor collectable in collectables)
+            {
+                if (miner.GetPosition().Equals(collectable.GetPosition()))
+                {
+                    int points = ((Collectable)collectable).GetPoints();
+                    ((Score)score).AddPoints(points);
+                    cast.RemoveActor("collectables", collectable")
+                }
+            }
         }
 
         /// <summary>
