@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using CSE210_04.Game.Casting;
+using Greed.Game.Casting;
 
-namespace Unit04.Game.Casting
+namespace Greed.Game.Casting
 {
     /// <summary>
     /// <para>A collection of actors.</para>
@@ -98,11 +98,6 @@ namespace Unit04.Game.Casting
             {
                 _actors[group].Remove(actor);
             }
-        }
-
-        internal void AddActor(Collectable collectable)
-        {
-            throw new NotImplementedException();
         }
     }
 }

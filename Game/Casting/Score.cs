@@ -1,7 +1,7 @@
 using System;
-using Unit04.Game.Casting;
+using Greed.Game.Casting;
 
-namespace CSE210_04.Game.Casting
+namespace Greed.Game.Casting
 {
     public class Score : Actor
     {   

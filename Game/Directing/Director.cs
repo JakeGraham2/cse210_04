@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
-using CSE210_04.Game.Casting;
-using Unit04.Game.Casting;
-using Unit04.Game.Services;
+using Greed.Game.Casting;
+using Greed.Game.Services;
 
-
-namespace Unit04.Game.Directing
+namespace Greed.Game.Directing
 {
     /// <summary>
     /// <para>A person who directs the game.</para>
@@ -97,7 +95,7 @@ namespace Unit04.Game.Directing
                 collectable.SetPosition(position);
                 collectable.SetColor(color);
                 collectable.SetPoints(points);
-                cast.AddActor(collectable);
+                cast.AddActor("collectables", collectable);
             }
 
             //2. get instances of all the ators hat I need from the cast
@@ -123,7 +121,7 @@ namespace Unit04.Game.Directing
                 {
                     int points = ((Collectable)collectable).GetPoints();
                     ((Score)score).AddPoints(points);
-                    cast.RemoveActor("collectables", collectable")
+                    cast.RemoveActor("collectables", collectable);
                 }
             }
         }

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Unit04.Game.Casting;
-using Unit04.Game.Directing;
-using Unit04.Game.Services;
+using Greed.Game.Casting;
+using Greed.Game.Directing;
+using Greed.Game.Services;
 
 
-namespace Unit04
+namespace Greed
 {
     /// <summary>
     /// The program's entry point.
@@ -50,7 +50,7 @@ namespace Unit04
             Miner.SetFontSize(FONT_SIZE);
             Miner.SetColor(WHITE);
             Miner.SetPosition(new Point(MAX_X / 2, MAX_Y / 2));
-            cast.AddActor("Miner", Miner);
+            cast.AddActor("miner", Miner);
 
             // load the messages
             List<string> messages = File.ReadAllLines(DATA_PATH).ToList<string>();
@@ -72,13 +72,12 @@ namespace Unit04
                 int b = random.Next(0, 256);
                 Color color = new Color(r, g, b);
 
-                Collectable Collectable = new Collectable();
-                Collectable.SetText(text);
-                Collectable.SetFontSize(FONT_SIZE);
-                Collectable.SetColor(color);
-                Collectable.SetPosition(position);
-                Collectable.SetMessage(message);
-                cast.AddActor("Collectables", Collectable);
+                Collectable collectable = new Collectable();
+                collectable.SetText(text);
+                collectable.SetFontSize(FONT_SIZE);
+                collectable.SetColor(color);
+                collectable.SetPosition(position);
+                cast.AddActor("Collectables", collectable);
             }
 
             // create the score
