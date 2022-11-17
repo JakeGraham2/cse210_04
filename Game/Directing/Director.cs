@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using CSE210_04.Game.Casting;
 using Unit04.Game.Casting;
 using Unit04.Game.Services;
 
@@ -66,6 +68,38 @@ namespace Unit04.Game.Directing
             // TODO: change this to spawn, move, and handle actor collisions
 
             //1. spawn new collectables (randomize them)
+            Random random = new Random();
+            for (int i = 0; i < 23; i++)
+            {
+                int x = random.Next(0, 60);
+                int y = 0;
+                Point position = new Point(x, y);
+                position = position.Scale(15);
+
+                int r = random.Next(0, 255);
+                int g = random.Next(0, 255);
+                int b = random.Next(0, 255);
+                Color color = new Color(r, g, b);
+
+                string symbol = "*";
+                int points = 20;
+
+                int isRock = random.Next(0, 2);
+                if (isRock == 1)
+                {
+                    symbol = "@";
+                    points = -20;
+                }
+
+                Collectable collectable = new Collectable();
+                collectable.SetText(symbol);
+                collectable.SetFontSize(15);
+                collectable.SetPosition(position);
+                collectable.SetColor(color);
+                collectable.SetPoints(points);
+                cast.AddActor(collectable);
+            }
+
             //2. get instances of all the ators hat I need from the cast
             Actor miner = cast.GetFirstActor("miner");
             Actor score = cast.GetFirstActor("score");
@@ -83,15 +117,15 @@ namespace Unit04.Game.Directing
             }
 
             //4. handle collisions between the miner and the collectables
-            foreach (Actor collectable in collectables)
-            {
-                if (miner.GetPosition().Equals(collectable.GetPosition()))
-                {
-                    int points = ((Collectable)collectable).GetPoints();
-                    ((Score)score).AddPoints(points);
-                    cast.RemoveActor("collectables", collectable")
-                }
-            }
+            // foreach (Actor collectable in collectables)
+            // {
+            //     if (miner.GetPosition().Equals(collectable.GetPosition()))
+            //     {
+            //         int points = ((Collectable)collectable).GetPoints();
+            //         ((Score)score).AddPoints(points);
+            //         cast.RemoveActor("collectables", collectable")
+            //     }
+            // }
         }
 
         /// <summary>

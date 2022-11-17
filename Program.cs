@@ -21,10 +21,10 @@ namespace Unit04
         private static int FONT_SIZE = 15;
         private static int COLS = 60;
         private static int ROWS = 40;
-        private static string CAPTION = "Robot Finds Kitten";
+        private static string CAPTION = "Miner Finds Gem (or not!?)";
         private static string DATA_PATH = "Data/messages.txt";
         private static Color WHITE = new Color(255, 255, 255);
-        private static int DEFAULT_ARTIFACTS = 40;
+        private static int DEFAULT_CollectableS = 40;
 
 
         /// <summary>
@@ -37,27 +37,27 @@ namespace Unit04
             Cast cast = new Cast();
 
             // create the banner
-            Actor banner = new Actor();
-            banner.SetText("");
-            banner.SetFontSize(FONT_SIZE);
-            banner.SetColor(WHITE);
-            banner.SetPosition(new Point(CELL_SIZE, 0));
-            cast.AddActor("banner", banner);
+            // Actor banner = new Actor();
+            // banner.SetText("");
+            // banner.SetFontSize(FONT_SIZE);
+            // banner.SetColor(WHITE);
+            // banner.SetPosition(new Point(CELL_SIZE, 0));
+            // cast.AddActor("banner", banner);
 
-            // create the robot
-            Actor robot = new Actor();
-            robot.SetText("#");
-            robot.SetFontSize(FONT_SIZE);
-            robot.SetColor(WHITE);
-            robot.SetPosition(new Point(MAX_X / 2, MAX_Y / 2));
-            cast.AddActor("robot", robot);
+            // create the Miner
+            Actor Miner = new Actor();
+            Miner.SetText("#");
+            Miner.SetFontSize(FONT_SIZE);
+            Miner.SetColor(WHITE);
+            Miner.SetPosition(new Point(MAX_X / 2, MAX_Y / 2));
+            cast.AddActor("Miner", Miner);
 
             // load the messages
             List<string> messages = File.ReadAllLines(DATA_PATH).ToList<string>();
 
-            // create the artifacts
+            // create the collectables
             Random random = new Random();
-            for (int i = 0; i < DEFAULT_ARTIFACTS; i++)
+            for (int i = 0; i < DEFAULT_CollectableS; i++)
             {
                 string text = ((char)random.Next(33, 126)).ToString();
                 string message = messages[i];
@@ -72,13 +72,13 @@ namespace Unit04
                 int b = random.Next(0, 256);
                 Color color = new Color(r, g, b);
 
-                Artifact artifact = new Artifact();
-                artifact.SetText(text);
-                artifact.SetFontSize(FONT_SIZE);
-                artifact.SetColor(color);
-                artifact.SetPosition(position);
-                artifact.SetMessage(message);
-                cast.AddActor("artifacts", artifact);
+                Collectable Collectable = new Collectable();
+                Collectable.SetText(text);
+                Collectable.SetFontSize(FONT_SIZE);
+                Collectable.SetColor(color);
+                Collectable.SetPosition(position);
+                Collectable.SetMessage(message);
+                cast.AddActor("Collectables", Collectable);
             }
 
             // start the game

@@ -1,3 +1,6 @@
+using System;
+using Unit04.Game.Casting;
+
 namespace CSE210_04.Game.Casting
 {
     public class Collectable : Actor
@@ -6,7 +9,9 @@ namespace CSE210_04.Game.Casting
 
         public Collectable()
         {
+
         }
+        
 
         public int GetPoints()
         {

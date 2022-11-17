@@ -1,5 +1,6 @@
+using System;
 using System.Collections.Generic;
-
+using CSE210_04.Game.Casting;
 
 namespace Unit04.Game.Casting
 {
@@ -99,5 +100,9 @@ namespace Unit04.Game.Casting
             }
         }
 
+        internal void AddActor(Collectable collectable)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
