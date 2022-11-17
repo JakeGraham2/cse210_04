@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\Unit04.csproj": {}
+    "C:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\Unit04.csproj": {}
   },
   "projects": {
-    "c:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\Unit04.csproj": {
+    "C:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\Unit04.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\Unit04.csproj",
+        "projectUniqueName": "C:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\Unit04.csproj",
         "projectName": "Unit04",
-        "projectPath": "c:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\Unit04.csproj",
+        "projectPath": "C:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\Unit04.csproj",
         "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\obj\\",
+        "outputPath": "C:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config"

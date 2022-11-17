@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Unit04.Game.Casting;
-using Unit04.Game.Casting;
 using Unit04.Game.Directing;
 using Unit04.Game.Services;
 
@@ -81,6 +80,14 @@ namespace Unit04
                 Collectable.SetMessage(message);
                 cast.AddActor("Collectables", Collectable);
             }
+
+            // create the score
+            Actor score = new Actor();
+            score.SetText("Score: 0");
+            score.SetFontSize(FONT_SIZE);
+            score.SetColor(WHITE);
+            score.SetPosition(new Point(0, MAX_Y - CELL_SIZE));
+            cast.AddActor("score", score);
 
             // start the game
             KeyboardService keyboardService = new KeyboardService(CELL_SIZE);
