@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\Unit04.csproj": {}
+    "/Users/mandehjoeldoh/Desktop/git/CSE210/cse210_04/Unit04.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\Unit04.csproj": {
+    "/Users/mandehjoeldoh/Desktop/git/CSE210/cse210_04/Unit04.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\Unit04.csproj",
+        "projectUniqueName": "/Users/mandehjoeldoh/Desktop/git/CSE210/cse210_04/Unit04.csproj",
         "projectName": "Unit04",
-        "projectPath": "C:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\Unit04.csproj",
-        "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\obj\\",
+        "projectPath": "/Users/mandehjoeldoh/Desktop/git/CSE210/cse210_04/Unit04.csproj",
+        "packagesPath": "/Users/mandehjoeldoh/.nuget/packages/",
+        "outputPath": "/Users/mandehjoeldoh/Desktop/git/CSE210/cse210_04/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/mandehjoeldoh/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -40,7 +40,7 @@
           "dependencies": {
             "raylib-cs": {
               "target": "Package",
-              "version": "[3.7.0.1, )"
+              "version": "[4.2.0.1, )"
             }
           },
           "imports": [
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
         }
       }
     }

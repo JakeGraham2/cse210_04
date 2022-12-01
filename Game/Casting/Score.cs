@@ -19,7 +19,5 @@ namespace Greed.Game.Casting
             SetText($"Score: {_points}");
         }
 
-
-
     }
 }

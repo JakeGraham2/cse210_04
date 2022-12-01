@@ -22,7 +22,6 @@ namespace Greed
         private static int COLS = 60;
         private static int ROWS = 40;
         private static string CAPTION = "Miner Finds Gem (or not!?)";
-        private static string DATA_PATH = "Data/messages.txt";
         private static Color WHITE = new Color(255, 255, 255);
         private static int DEFAULT_CollectableS = 40;
 
@@ -51,34 +50,6 @@ namespace Greed
             Miner.SetColor(WHITE);
             Miner.SetPosition(new Point(MAX_X / 2, MAX_Y / 2));
             cast.AddActor("miner", Miner);
-
-            // load the messages
-            List<string> messages = File.ReadAllLines(DATA_PATH).ToList<string>();
-
-            // create the collectables
-            Random random = new Random();
-            for (int i = 0; i < DEFAULT_CollectableS; i++)
-            {
-                string text = ((char)random.Next(33, 126)).ToString();
-                string message = messages[i];
-
-                int x = random.Next(1, COLS);
-                int y = random.Next(1, ROWS);
-                Point position = new Point(x, y);
-                position = position.Scale(CELL_SIZE);
-
-                int r = random.Next(0, 256);
-                int g = random.Next(0, 256);
-                int b = random.Next(0, 256);
-                Color color = new Color(r, g, b);
-
-                Collectable collectable = new Collectable();
-                collectable.SetText(text);
-                collectable.SetFontSize(FONT_SIZE);
-                collectable.SetColor(color);
-                collectable.SetPosition(position);
-                cast.AddActor("Collectables", collectable);
-            }
 
             // create the score
             Actor score = new Actor();

@@ -2,18 +2,18 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Raylib-cs/3.7.0.1": {
+      "Raylib-cs/4.2.0.1": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
         "compile": {
-          "lib/netstandard2.1/Raylib-cs.dll": {
+          "lib/net6.0/Raylib-cs.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/Raylib-cs.dll": {
+          "lib/net6.0/Raylib-cs.dll": {
             "related": ".xml"
           }
         },
@@ -48,16 +48,19 @@
     }
   },
   "libraries": {
-    "Raylib-cs/3.7.0.1": {
-      "sha512": "DN9MC1QyyUFd5rskN9czcZ0w1DjvZ23vaJmwexaPOqQ0b0qJppq1hL0jWfl3fzAANJ59ZxuyUyMF6gSIM7QuWg==",
+    "Raylib-cs/4.2.0.1": {
+      "sha512": "DjBZuUPNVGbaWTWx2JgU4kaOn/crZWWpBlcxMBd6xUWGZxHFRr8v4nsSkOIdCm8HjkeoifNqeHLq99l0QoC8fg==",
       "type": "package",
-      "path": "raylib-cs/3.7.0.1",
+      "path": "raylib-cs/4.2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard2.1/Raylib-cs.dll",
-        "lib/netstandard2.1/Raylib-cs.xml",
-        "raylib-cs.3.7.0.1.nupkg.sha512",
+        "README.md",
+        "lib/net5.0/Raylib-cs.dll",
+        "lib/net5.0/Raylib-cs.xml",
+        "lib/net6.0/Raylib-cs.dll",
+        "lib/net6.0/Raylib-cs.xml",
+        "raylib-cs.4.2.0.1.nupkg.sha512",
         "raylib-cs.nuspec",
         "raylib-cs_64x64.png",
         "runtimes/linux-x64/native/libraylib.so",
@@ -116,23 +119,23 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "raylib-cs >= 3.7.0.1"
+      "raylib-cs >= 4.2.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jacob\\.nuget\\packages\\": {}
+    "/Users/mandehjoeldoh/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\Unit04.csproj",
+      "projectUniqueName": "/Users/mandehjoeldoh/Desktop/git/CSE210/cse210_04/Unit04.csproj",
       "projectName": "Unit04",
-      "projectPath": "c:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\Unit04.csproj",
-      "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\jacob\\Documents\\CSE210\\cse210_04\\obj\\",
+      "projectPath": "/Users/mandehjoeldoh/Desktop/git/CSE210/cse210_04/Unit04.csproj",
+      "packagesPath": "/Users/mandehjoeldoh/.nuget/packages/",
+      "outputPath": "/Users/mandehjoeldoh/Desktop/git/CSE210/cse210_04/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/mandehjoeldoh/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -158,7 +161,7 @@
         "dependencies": {
           "raylib-cs": {
             "target": "Package",
-            "version": "[3.7.0.1, )"
+            "version": "[4.2.0.1, )"
           }
         },
         "imports": [
@@ -177,7 +180,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
       }
     }
   }
